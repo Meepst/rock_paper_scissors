@@ -16,11 +16,11 @@ const game = () => {
 
                 const movesLeft = document.querySelector('.movesleft');
                 moves++;
-                movesLeft.innerText =`Moves Left: ${10-moves}`;
+                movesLeft.innerHTML =`Moves Left: ${10-moves}`;
 
                 const computerChoice = computerOptions[Math.floor(Math.random() * computerOptions.length)];
 
-                winner(this.innerText,computerChoice);
+                winner(this.innerHTML,computerChoice);
 
                 if(moves == 10){
                     gameOver(playerOptions,movesLeft);
