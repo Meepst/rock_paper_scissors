@@ -2,7 +2,7 @@ const game = () => {
     let playerScore = 0;
     let computerScore = 0;
     let moves = 0;
-    function playGame = () => {
+    const playGame = () => {
         const rockBtn = document.querySelector('.rock');
         const paperBtn = document.querySelector('.paper');
         const scissorBtn = document.querySelector('.scissor');
@@ -10,7 +10,7 @@ const game = () => {
         const computerOptions = ['rock','paper','scissor'];
         
         playerOptions.forEach(option => {
-            option.addEventListener('click',fucntion(){
+            option.addEventListener('click',function(){
 
                 const movesLeft = document.querySelector('.movesleft');
                 moves++;
@@ -22,7 +22,7 @@ const game = () => {
                 winner(this.innertext,computerChoice)
 
                 if(moves == 10){
-                    gameOver(playerOptions,moveLeft);
+                    gameOver(playerOptions,movesLeft);
                 }
             })
         })
