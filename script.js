@@ -5,14 +5,17 @@ const choiceBtns = document.querySelectorAll(".choiceBtn");
 let player;
 let computer;
 let result;
+let moves = 0;
 
 choiceBtns.forEach(button => button.addEventListener("click", () => {
 
     player = button.textContent;
+    moves++;
     computerTurn();
     playerText.textContent = `Player: ${player}`;
     computerText.textContent = `Computer: ${computer}`;
     resultText.textContent = checkWinner();
+    movesText.textContent = `Moves: ${moves}`;
 
 }))
 
