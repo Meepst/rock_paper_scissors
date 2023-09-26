@@ -1,12 +1,11 @@
 *{
+    background-color: #E5C3A6;
+    color: black;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background: #082c6c;
-    color: #fff;
 }
-
-.game{
+#gameDiv{
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -14,66 +13,32 @@
     justify-content: center;
     align-items: center;
 }
-
-.title{
-    position: absolute;
-    top: 0;
-    font-size: 4rem;
-    z-index: 2;
-}
-
-.score{
+.choiceBtn{
     display: flex;
-    width: 30vw;
+    width: 50vw;
     justify-content: space-evenly;
-    position: absolute;
-    top: 70px;
-    z-index: 1;
-}
-
-.rock.paper.scissor{
+    margin-top: 2rem;
     padding: 0.8rem;
     width: 100px;
     border-radius: 10px;
-    background: green;
+    background: white;
     outline: none;
-    border-color: green;
+    border-color: white;
     border: none;
-    cursor: pointer;
+    cursor: crosshair;
 }
 
-.move{
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.reload{
-    display: none;
-    margin-top: 2rem;
-    padding: 1rem;
-    background: green;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.result{
-    margin-top: 20px;
-    font-size: 1.2rem;
-}
-
-@media screen and (max-width: 612px)
-{
+@media screen and (max-width: 612px){
     .title{
         text-align: center;
     }
-    .score{
+    .gameText{
         position: absolute;
         top: 200px;
         width: 100vw;
     }
-    .options{
+    .choiceBtn{
         width: 100vw;
     }
 }
+
